@@ -10,14 +10,14 @@ import com.google.inject.*
  */
 class ObjectGenerator {
     private Injector container = Guice.createInjector(new GeneratorsModule())
+    private Expando object = new Expando()
 
     void addField(String name, Class generatorClass) {
-//        container.registerSingleton(name, generatorClass)
-        println container.getInstance(generatorClass)
+        object[name] = container.getInstance(generatorClass)
     }
 
     Object generate() {
-        return null
+        return object
     }
 }
 
