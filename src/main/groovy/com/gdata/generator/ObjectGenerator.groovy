@@ -12,8 +12,12 @@ class ObjectGenerator {
     private Injector container = Guice.createInjector(new GeneratorsModule())
     private Expando object = new Expando()
 
-    void addField(String name, Class generatorClass) {
-        object[name] = container.getInstance(generatorClass)
+    void setProperty(String property, Object value) {
+        if (value instanceof Class) {
+            object[property] = container.getInstance((Class) value)
+        } else {
+            throw new IllegalArgumentException()
+        }
     }
 
     Object generate() {
