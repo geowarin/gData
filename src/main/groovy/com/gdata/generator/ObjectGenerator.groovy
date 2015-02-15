@@ -1,6 +1,6 @@
 package com.gdata.generator
 
-import com.gdata.generator.injection.GeneratorContainer
+import org.springframework.context.support.StaticApplicationContext
 
 /**
  *
@@ -9,15 +9,16 @@ import com.gdata.generator.injection.GeneratorContainer
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
 class ObjectGenerator extends Generator<Object> {
-    private GeneratorContainer container = new GeneratorContainer()
+    private StaticApplicationContext container = new StaticApplicationContext()
 
     void addField(String name, Class<Generator> generatorClass) {
-        container.define(name, generatorClass)
+        container.registerSingleton(name, generatorClass)
     }
 
     @Override
     Object generate() {
-        return container.generators
+        List<String> names = container.beanDefinitionNames
+        return names.collectEntries { [(it): container.getBean(it).generate()] }
     }
 }
 

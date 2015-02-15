@@ -15,7 +15,7 @@ class Gdata {
     static void main(String[] args) {
 
         ObjectGenerator generator = new ObjectGenerator()
-//        generator.addField('country', CountryDataGenerator)
+        generator.addField('country', CountryDataGenerator)
         generator.addField('name', NameDataGenerator)
         println generator.generate()
     }
