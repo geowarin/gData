@@ -3,6 +3,7 @@ package com.gdata
 import com.gdata.generator.ListGenerator
 import com.gdata.generator.ObjectGenerator
 import com.gdata.generator.country.Country
+import com.gdata.generator.person.Email
 import com.gdata.generator.person.FirstName
 import com.gdata.generator.person.LastName
 
@@ -19,6 +20,7 @@ class Gdata {
         personGenerator.country = Country
         personGenerator.name = FirstName
         personGenerator.lastName = LastName
+        personGenerator.email = Email
         println new ListGenerator(personGenerator).generate(2)
     }
 }
