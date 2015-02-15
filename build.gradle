@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.9'
+    testCompile 'junit:junit:4.11'
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/main/groovy'
+            exclude '**/*.groovy'
+        }
+    }
+}
