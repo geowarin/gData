@@ -11,9 +11,9 @@ import com.google.inject.*
 class ObjectGenerator {
     private Injector container = Guice.createInjector(new GeneratorsModule())
 
-    void addField(String name, Class<Provider> generatorClass) {
+    void addField(String name, Class generatorClass) {
 //        container.registerSingleton(name, generatorClass)
-        println container.getInstance(generatorClass).get()
+        println container.getInstance(generatorClass)
     }
 
     Object generate() {

@@ -1,8 +1,8 @@
 package com.gdata
 
 import com.gdata.generator.ObjectGenerator
-import com.gdata.generator.country.CountryDataGenerator
-import com.gdata.generator.name.NameDataGenerator
+import com.gdata.generator.country.Country
+import com.gdata.generator.name.FirstName
 
 /**
  *
@@ -15,8 +15,8 @@ class Gdata {
     static void main(String[] args) {
 
         ObjectGenerator generator = new ObjectGenerator()
-        generator.addField('country', CountryDataGenerator)
-        generator.addField('name', NameDataGenerator)
+        generator.addField('country', Country)
+        generator.addField('name', FirstName)
         println generator.generate()
     }
 }

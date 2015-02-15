@@ -1,6 +1,6 @@
 package com.gdata.generator.country
 
-import groovy.transform.ToString
+import com.gdata.loader.DataLoader
 
 /**
  *
@@ -14,10 +14,16 @@ class Country {
 
     @Override
     String toString() {
-       name
+        name
     }
 
     void setLocale(String lang) {
         this.locale = new Locale(lang)
+    }
+
+    static class Loader implements DataLoader<Country> {
+        Loader() {
+            loadData()
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
-  "en_us" : [
-    "John"
+  "en_us": [
+    {"firstName": "John"}
   ],
-  "fr" : [
-    "Jean"
+  "fr": [
+    {"firstName": "Jean"}
   ]
 }
