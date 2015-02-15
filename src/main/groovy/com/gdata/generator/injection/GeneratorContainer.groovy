@@ -53,7 +53,7 @@ class GeneratorContainer {
         }
 
         Generator create() {
-            def satisfiedDeps = dependencies.collect { instances.get(it) }
+            def satisfiedDeps = dependencies.collect { instances.get(it) }.findAll()
             if (satisfiedDeps.size() == dependencies.size()) {
                 instance = generatorClass.newInstance(*satisfiedDeps)
                 value = instance.generate()

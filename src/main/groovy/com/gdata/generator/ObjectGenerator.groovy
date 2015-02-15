@@ -8,8 +8,7 @@ import com.gdata.generator.injection.GeneratorContainer
  * Time: 14:34
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class ObjectGenerator extends Generator<Expando> {
-    private final Expando object = new Expando()
+class ObjectGenerator extends Generator<Object> {
     private GeneratorContainer container = new GeneratorContainer()
 
     void addField(String name, Class<Generator> generatorClass) {
@@ -17,12 +16,8 @@ class ObjectGenerator extends Generator<Expando> {
     }
 
     @Override
-    Expando generate() {
-        Map<String, Generator> generators = container.generators
-        println generators
-        return object
+    Object generate() {
+        return container.generators
     }
-
-
 }
 
