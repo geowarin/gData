@@ -1,6 +1,9 @@
 package com.gdata.generator
 
-import org.springframework.context.support.StaticApplicationContext
+import com.gdata.generator.country.Country
+import com.gdata.generator.country.CountryDataGenerator
+import com.gdata.generator.name.NameDataGenerator
+import com.google.inject.*
 
 /**
  *
@@ -9,16 +12,25 @@ import org.springframework.context.support.StaticApplicationContext
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
 class ObjectGenerator extends Generator<Object> {
-    private StaticApplicationContext container = new StaticApplicationContext()
+    private Injector container = Guice.createInjector(new MyModule())
 
     void addField(String name, Class<Generator> generatorClass) {
-        container.registerSingleton(name, generatorClass)
+//        container.registerSingleton(name, generatorClass)
+        println container.getInstance(generatorClass).generate()
     }
 
     @Override
     Object generate() {
-        List<String> names = container.beanDefinitionNames
-        return names.collectEntries { [(it): container.getBean(it).generate()] }
+        return null
     }
 }
 
+class MyModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        bind(CountryDataGenerator).in(Singleton)
+        bind(Country).toProvider(CountryDataGenerator)
+        bind(NameDataGenerator)
+    }
+}

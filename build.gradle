@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.9'
-    compile 'org.springframework:spring-context:4.1.1.RELEASE'
+    compile 'com.google.inject:guice:3.0'
     testCompile 'junit:junit:4.11'
 }
 

@@ -2,7 +2,6 @@ package com.gdata.generator
 
 import com.gdata.generator.country.Country
 import groovy.json.JsonSlurper
-import org.springframework.beans.factory.annotation.Autowired
 
 /**
  *
@@ -11,11 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
 abstract class LocalizedGenerator<T> extends Generator<T> {
-    @Autowired(required = true)
     protected Country country
     protected List<T> data
 
-    LocalizedGenerator() {
+    LocalizedGenerator(Country country) {
+        this.country = country
         InputStream stream = this.getClass().getResourceAsStream('data.json')
         Map<String, List<T>> allData = new JsonSlurper().parse(stream)
         data = allData.get(country.locale.toString())
