@@ -11,15 +11,10 @@ import com.google.inject.Provider
  * Time: 12:18
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class NameDataGenerator implements LocalizedLoader<String>, Provider<String> {
+class NameDataGenerator implements LocalizedLoader<String> {
 
     @Inject
     NameDataGenerator(Country country) {
         loadData(country)
-    }
-
-    @Override
-    String get() {
-        data
     }
 }

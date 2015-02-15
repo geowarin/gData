@@ -1,5 +1,6 @@
 package com.gdata.loader
 
+import com.google.inject.Provider
 import groovy.json.JsonSlurper
 
 /**
@@ -8,7 +9,7 @@ import groovy.json.JsonSlurper
  * Time: 12:21
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-abstract trait DataLoader<T> implements Randomized<T> {
+abstract trait DataLoader<T> implements Randomized<T>, Provider<T> {
     protected T data
 
     void loadData() {
@@ -17,7 +18,7 @@ abstract trait DataLoader<T> implements Randomized<T> {
         data = pickRandom(json)
     }
 
-    T getData() {
+    T get() {
         data
     }
 }

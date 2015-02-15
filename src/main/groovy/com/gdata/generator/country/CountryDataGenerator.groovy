@@ -9,14 +9,9 @@ import com.google.inject.Provider
  * Time: 12:18
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class CountryDataGenerator implements DataLoader<Country>, Provider<Country> {
+class CountryDataGenerator implements DataLoader<Country> {
 
     CountryDataGenerator() {
         loadData()
-    }
-
-    @Override
-    Country get() {
-        data
     }
 }

@@ -1,6 +1,7 @@
 package com.gdata.loader
 
 import com.gdata.generator.country.Country
+import com.google.inject.Provider
 import groovy.json.JsonSlurper
 
 /**
@@ -9,7 +10,7 @@ import groovy.json.JsonSlurper
  * Time: 12:21
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-trait LocalizedLoader<T> implements Randomized<T> {
+trait LocalizedLoader<T> implements Randomized<T>, Provider<T> {
     protected Country country
     protected T data
 
@@ -20,7 +21,7 @@ trait LocalizedLoader<T> implements Randomized<T> {
         data = pickRandom(allData.get(country.locale.toString()))
     }
 
-    T getData() {
+    T get() {
         data
     }
 }
