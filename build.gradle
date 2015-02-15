@@ -9,14 +9,6 @@ repositories {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.9'
+    compile 'com.google.inject:guice:3.0'
     testCompile 'junit:junit:4.11'
-}
-
-sourceSets {
-    main {
-        resources {
-            srcDir 'src/main/groovy'
-            exclude '**/*.groovy'
-        }
-    }
 }

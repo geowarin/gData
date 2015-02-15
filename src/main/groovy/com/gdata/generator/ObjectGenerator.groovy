@@ -1,6 +1,6 @@
 package com.gdata.generator
 
-import com.gdata.generator.injection.GeneratorContainer
+import com.google.inject.*
 
 /**
  *
@@ -8,16 +8,24 @@ import com.gdata.generator.injection.GeneratorContainer
  * Time: 14:34
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class ObjectGenerator extends Generator<Object> {
-    private GeneratorContainer container = new GeneratorContainer()
+class ObjectGenerator {
+    Map<String, Class> properties = new LinkedHashMap<>()
 
-    void addField(String name, Class<Generator> generatorClass) {
-        container.define(name, generatorClass)
+    void setProperty(String property, Object value) {
+        if (value instanceof Class) {
+            properties.put(property, value)
+        } else {
+            throw new IllegalArgumentException()
+        }
     }
 
-    @Override
     Object generate() {
-        return container.generators
+        Injector container = Guice.createInjector(new GeneratorsModule())
+        Expando object = new Expando()
+        properties.forEach { name, clazz ->
+            object[name] = container.getInstance(clazz)
+        }
+        return object
     }
 }
 

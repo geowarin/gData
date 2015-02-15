@@ -1,8 +1,11 @@
 package com.gdata
 
+import com.gdata.generator.ListGenerator
 import com.gdata.generator.ObjectGenerator
-import com.gdata.generator.country.CountryDataGenerator
-import com.gdata.generator.name.NameDataGenerator
+import com.gdata.generator.country.Country
+import com.gdata.generator.person.Email
+import com.gdata.generator.person.FirstName
+import com.gdata.generator.person.LastName
 
 /**
  *
@@ -13,10 +16,11 @@ import com.gdata.generator.name.NameDataGenerator
 class Gdata {
 
     static void main(String[] args) {
-
-        ObjectGenerator generator = new ObjectGenerator()
-//        generator.addField('country', CountryDataGenerator)
-        generator.addField('name', NameDataGenerator)
-        println generator.generate()
+        ObjectGenerator personGenerator = new ObjectGenerator()
+        personGenerator.country = Country
+        personGenerator.name = FirstName
+        personGenerator.lastName = LastName
+        personGenerator.email = Email
+        println new ListGenerator(personGenerator).generate(2)
     }
 }

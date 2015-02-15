@@ -1,0 +1,10 @@
+{
+  "en_us": [
+    {"firstName": "John"},
+    {"firstName": "Edgar"}
+  ],
+  "fr": [
+    {"firstName": "Jean"},
+    {"firstName": "Edouard"}
+  ]
+}
