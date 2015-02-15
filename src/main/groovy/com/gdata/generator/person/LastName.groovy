@@ -1,4 +1,4 @@
-package com.gdata.generator.name
+package com.gdata.generator.person
 
 import com.gdata.generator.country.Country
 import com.gdata.loader.LocalizedLoader
@@ -10,18 +10,18 @@ import com.google.inject.Inject
  * Time: 16:02
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class FirstName {
-    String firstName
+class LastName {
+    String lastName
 
     @Override
     public String toString() {
-        firstName
+        lastName
     }
 
-    static class Loader implements LocalizedLoader<FirstName> {
+    static class Loader implements LocalizedLoader<LastName> {
         @Inject
         Loader(Country country) {
-            loadData(country.locale, '/firstName.json')
+            loadData(country.locale, '/lastName.json')
         }
     }
 }

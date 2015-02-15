@@ -15,7 +15,8 @@ trait LocalizedLoader<T> implements Randomized<T>, Provider<T> {
     void loadData(Locale locale, String dataPath) {
         InputStream stream = this.getClass().getResourceAsStream(dataPath)
         Map<String, List<T>> allData = new JsonSlurper().parse(stream)
-        data = pickRandom(allData.get(locale.toString()))
+        List<T> localizedData = allData.get(locale.toString()) ?: allData.get('default')
+        data = pickRandom(localizedData)
     }
 
     T get() {
