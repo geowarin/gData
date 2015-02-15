@@ -9,18 +9,22 @@ import com.google.inject.*
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
 class ObjectGenerator {
-    private Injector container = Guice.createInjector(new GeneratorsModule())
-    private Expando object = new Expando()
+    Map<String, Class> properties = new LinkedHashMap<>()
 
     void setProperty(String property, Object value) {
         if (value instanceof Class) {
-            object[property] = container.getInstance((Class) value)
+            properties.put(property, value)
         } else {
             throw new IllegalArgumentException()
         }
     }
 
     Object generate() {
+        Injector container = Guice.createInjector(new GeneratorsModule())
+        Expando object = new Expando()
+        properties.forEach { name, clazz ->
+            object[name] = container.getInstance(clazz)
+        }
         return object
     }
 }
