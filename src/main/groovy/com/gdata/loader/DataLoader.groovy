@@ -12,8 +12,8 @@ import groovy.json.JsonSlurper
 abstract trait DataLoader<T> implements Randomized<T>, Provider<T> {
     protected T data
 
-    void loadData() {
-        InputStream stream = this.getClass().getResourceAsStream('data.json')
+    void loadData(String dataPath) {
+        InputStream stream = this.getClass().getResourceAsStream(dataPath)
         List<T> json = new JsonSlurper().parse(stream)
         data = pickRandom(json)
     }

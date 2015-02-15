@@ -23,7 +23,7 @@ class Country {
 
     static class Loader implements DataLoader<Country> {
         Loader() {
-            loadData()
+            loadData('/country.json')
         }
     }
 }

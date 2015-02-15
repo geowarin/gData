@@ -21,7 +21,7 @@ class FirstName {
     static class Loader implements LocalizedLoader<FirstName> {
         @Inject
         Loader(Country country) {
-            loadData(country)
+            loadData(country.locale, '/firstName.json')
         }
     }
 }
