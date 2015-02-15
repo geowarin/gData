@@ -1,6 +1,6 @@
 package com.gdata.generator.country
 
-import com.gdata.generator.DataGenerator
+import com.gdata.loader.DataLoader
 import com.google.inject.Provider
 
 /**
@@ -9,15 +9,14 @@ import com.google.inject.Provider
  * Time: 12:18
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class CountryDataGenerator extends DataGenerator<Country> implements Provider<Country> {
+class CountryDataGenerator implements DataLoader<Country>, Provider<Country> {
 
-    @Override
-    Country generate() {
-        return pickRandom()
+    CountryDataGenerator() {
+        loadData()
     }
 
     @Override
     Country get() {
-        return pickRandom()
+        data
     }
 }

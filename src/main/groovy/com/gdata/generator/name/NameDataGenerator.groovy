@@ -1,8 +1,9 @@
 package com.gdata.generator.name
 
-import com.gdata.generator.LocalizedGenerator
+import com.gdata.loader.LocalizedLoader
 import com.gdata.generator.country.Country
 import com.google.inject.Inject
+import com.google.inject.Provider
 
 /**
  *
@@ -10,15 +11,15 @@ import com.google.inject.Inject
  * Time: 12:18
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class NameDataGenerator extends LocalizedGenerator<String> {
+class NameDataGenerator implements LocalizedLoader<String>, Provider<String> {
 
     @Inject
     NameDataGenerator(Country country) {
-        super(country)
+        loadData(country)
     }
 
     @Override
-    String generate() {
-        return pickRandom()
+    String get() {
+        data
     }
 }

@@ -1,4 +1,4 @@
-package com.gdata.generator
+package com.gdata.loader
 
 import com.gdata.generator.country.Country
 import groovy.json.JsonSlurper
@@ -9,19 +9,18 @@ import groovy.json.JsonSlurper
  * Time: 12:21
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-abstract class LocalizedGenerator<T> extends Generator<T> {
+trait LocalizedLoader<T> implements Randomized<T> {
     protected Country country
-    protected List<T> data
+    protected T data
 
-    LocalizedGenerator(Country country) {
+    void loadData(Country country) {
         this.country = country
         InputStream stream = this.getClass().getResourceAsStream('data.json')
         Map<String, List<T>> allData = new JsonSlurper().parse(stream)
-        data = allData.get(country.locale.toString())
+        data = pickRandom(allData.get(country.locale.toString()))
     }
 
-    T pickRandom() {
-        Collections.shuffle(data)
-        data.first()
+    T getData() {
+        data
     }
 }

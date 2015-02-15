@@ -8,15 +8,14 @@ import com.google.inject.*
  * Time: 14:34
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
-class ObjectGenerator extends Generator<Object> {
+class ObjectGenerator {
     private Injector container = Guice.createInjector(new GeneratorsModule())
 
-    void addField(String name, Class<Generator> generatorClass) {
+    void addField(String name, Class<Provider> generatorClass) {
 //        container.registerSingleton(name, generatorClass)
-        println container.getInstance(generatorClass).generate()
+        println container.getInstance(generatorClass).get()
     }
 
-    @Override
     Object generate() {
         return null
     }
