@@ -1,408 +1,412 @@
 {
   "en_us": [
-    {"firstName": "John"},
-    {"firstName": "Edgar"}
+    {"firstName": "John", "gender": "MALE"},
+    {"firstName": "Eva", "gender": "FEMALE"}
   ],
   "fr": [
     {
       "firstName": "Agathe",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Alexandra",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Alexia",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Alice",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Alicia",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Amandine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Ambre",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Amélie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Anaël",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Anaëlle",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Anaïs",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Angelina",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Anna",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Bienvenue",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Candice",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Capucine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Carla",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Catherine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Charlotte",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Chaïma",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Chloé",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Clara",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Clotilde",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Cloé",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Clémence",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Célia",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Edwige",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Elsa",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Emma",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Eva",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Fanny",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Françoise",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Guillemette",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Inès",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Jade",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Jasmine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Jeanne",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Julia",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Julie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Juliette",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Justine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Katell",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Kimberley",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lamia",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lana",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Laura",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lauriane",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lena",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lilou",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lily",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lina",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lisa",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Loane",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lola",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lou",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Louise",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Louna",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lucie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Luna",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Lutécia",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Léa",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Léane",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Léonie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Maelys",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Manon",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Margaux",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Margot",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Marie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Marine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Marion",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Maryam",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Mathilde",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Maéva",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Maëlle",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Maïlé",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Maïwenn",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Mélanie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Mélissa",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Nina",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Noémie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Océane",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Pauline",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Romane",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Rosalie",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Rose",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Salomé",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Sara",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Sarah",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Solene",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Syrine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Tatiana",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Valentine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Yasmine",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Yüna",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Zoé",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Élisa",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Élise",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Éloïse",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Éléna",
-      "sex": "female"
+      "gender": "FEMALE"
     },
     {
       "firstName": "Émilie",
-      "sex": "female"
+      "gender": "FEMALE"
+    },
+    {
+      "firstName": "Jean",
+      "gender": "MALE"
     }
   ]
 }

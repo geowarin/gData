@@ -12,7 +12,7 @@ import com.google.inject.Inject
  */
 class FirstName {
     String firstName
-    String sex
+    Gender gender
 
     @Override
     public String toString() {
@@ -21,8 +21,11 @@ class FirstName {
 
     static class Loader implements LocalizedLoader<FirstName> {
         @Inject
-        Loader(Country country) {
-            loadData(country.locale, '/firstName.json')
+        Loader(Country country, Gender gender) {
+            loadData(country.locale, '/firstName.json') {
+                FirstName firstName = it as FirstName
+                firstName.gender == gender
+            }
         }
     }
 }

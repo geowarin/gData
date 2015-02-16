@@ -5,6 +5,7 @@ import com.gdata.generator.generator.ObjectGenerator
 import com.gdata.generator.country.Country
 import com.gdata.generator.person.Email
 import com.gdata.generator.person.FirstName
+import com.gdata.generator.person.Gender
 import com.gdata.generator.person.LastName
 
 /**
@@ -18,9 +19,10 @@ class Gdata {
     static void main(String[] args) {
         ObjectGenerator managerGenerator = new ObjectGenerator()
         managerGenerator.name = FirstName
-
+//
         ObjectGenerator personGenerator = new ObjectGenerator()
         personGenerator.country = Country
+        personGenerator.gender = Gender
         personGenerator.name = FirstName
         personGenerator.lastName = LastName
         personGenerator.email = Email
