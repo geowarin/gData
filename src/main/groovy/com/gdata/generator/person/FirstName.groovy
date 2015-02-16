@@ -12,6 +12,7 @@ import com.google.inject.Inject
  */
 class FirstName {
     String firstName
+    String sex
 
     @Override
     public String toString() {
