@@ -1,15 +1,7 @@
 package com.gdata.loader
 
-import com.gdata.generator.person.FirstName
-import com.gdata.generator.person.Gender
 import com.google.inject.Provider
 import groovy.json.JsonSlurper
-import groovy.transform.stc.ClosureParams
-import groovy.transform.stc.FirstParam
-import groovy.transform.stc.FromString
-
-import javax.lang.model.element.TypeElement
-import java.lang.reflect.TypeVariable
 
 /**
  *
@@ -26,10 +18,12 @@ trait LocalizedLoader<T> implements Randomized<T>, Provider<T> {
 
     void loadData(Locale locale, String dataPath, Closure filter) {
         InputStream stream = this.getClass().getResourceAsStream(dataPath)
-        Map<String, List<T>> allData = new JsonSlurper().parse(stream)
-        List<T> localizedData = allData.get(locale.toString()) ?: allData.get('default')
-        if (filter)
-            localizedData = localizedData.findAll(filter)
+        Map allData = new JsonSlurper().parse(stream)
+        List localizedData = allData[locale.toString()] ?: allData['default']
+        if (filter) {
+            Class generic = getClass().genericInterfaces[0].actualTypeArguments[0]
+            localizedData = localizedData.findAll { filter.call(generic.newInstance(it)) }
+        }
         data = pickRandom(localizedData)
     }
 

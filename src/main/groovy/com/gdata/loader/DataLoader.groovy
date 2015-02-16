@@ -14,7 +14,7 @@ abstract trait DataLoader<T> implements Randomized<T>, Provider<T> {
 
     void loadData(String dataPath) {
         InputStream stream = this.getClass().getResourceAsStream(dataPath)
-        List<T> json = new JsonSlurper().parse(stream)
+        List json = new JsonSlurper().parse(stream)
         data = pickRandom(json)
     }
 

@@ -23,8 +23,7 @@ class FirstName {
         @Inject
         Loader(Country country, Gender gender) {
             loadData(country.locale, '/firstName.json') {
-                FirstName firstName = it as FirstName
-                firstName.gender == gender
+                it.gender == gender
             }
         }
     }
